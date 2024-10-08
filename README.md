@@ -1,46 +1,136 @@
-# README
+## Getting Started with the Application
 
-To run app make sure you have:
+### Prerequisites
+Before running the app, ensure that your system meets the following requirements:
 
-- Ruby version >= 3.3.4
-- Rails version >= 7.2.1
+- **Ruby version**: >= 3.3.4
+- **Rails version**: >= 7.2.1
 
-To configure app:
+You can check your Ruby and Rails versions using the following commands:
 
-`bundle install`
+```bash
+ruby -v
+rails -v
+```
 
-`rake db:create`
+### Installation & Setup
 
-`rake db:migrate`
+1. **Clone the repository**  
+Clone this repository to your local machine:
 
-`rake db:seed`
+```bash
+git clone <repository_url>
+cd <repository_folder>
+```
 
-To run app:
+2. **Install dependencies**  
+Run the following command to install the necessary gems for the application:
 
-`rails server`
+```bash
+bundle install
+```
 
-App will be available at `localhost:3000` and should be able to access all the project requirements through routing in the app by clicking visit buttons.
+3. **Sqlite3 Database setup**  
+After installing the dependencies, set up the database using the following commands:
 
-To create, update or delete properties or units its best to use postman. Use these URLs with the correct HTML method (GET, POST, PUT, DELETE)
+- Create the database:
 
-For GET: 
+```bash
+rake db:create
+```
 
-- `http://localhost:3000/units.json` 
-- `http://localhost:3000/properties.json` 
-- `http://localhost:3000/units/[:id].json` 
-- `http://localhost:3000/properties/[:id].json`
+- Run migrations to structure the database:
 
-For POST:
+```bash
+rake db:migrate
+```
 
-- `http://localhost:3000/units.json` 
-- `http://localhost:3000/properties.json`
+- Seed the database with initial data:
 
-For PUT: 
+```bash
+rake db:seed
+```
 
-- `http://localhost:3000/units/[:id].json` 
-- `http://localhost:3000/properties/[:id].json`
+### Running the Application
 
-For DELETE: 
+To start the Rails server, execute the following:
 
-- `http://localhost:3000/units/[:id].json` 
-- `http://localhost:3000/properties/[:id].json`
+```bash
+rails server
+```
+
+The app will be running at **[http://localhost:3000](http://localhost:3000)**. You can interact with the project requirements directly through the web interface by clicking the "visit" buttons on the home page.
+
+### Interacting with the API via Postman
+
+For creating, updating, and deleting properties or units, it's recommended to use Postman or another API client. Below are the available API endpoints and the corresponding HTTP methods to use:
+
+#### GET Requests:
+- Fetch all units:
+
+```bash
+GET http://localhost:3000/units.json
+```
+
+- Fetch all properties:
+
+```bash
+GET http://localhost:3000/properties.json
+```
+
+- Fetch a single unit by ID:
+
+```bash
+GET http://localhost:3000/units/[:id].json
+```
+
+- Fetch a single property by ID:
+
+```bash
+GET http://localhost:3000/properties/[:id].json
+```
+
+#### POST Requests:
+- Create a new unit:
+
+```bash
+POST http://localhost:3000/units.json
+```
+
+- Create a new property:
+
+```bash
+POST http://localhost:3000/properties.json
+```
+
+#### PUT Requests:
+- Update an existing unit by ID:
+
+```bash
+PUT http://localhost:3000/units/[:id].json
+```
+
+- Update an existing property by ID:
+
+```bash
+PUT http://localhost:3000/properties/[:id].json
+```
+
+#### DELETE Requests:
+- Delete an existing unit by ID:
+
+```bash
+DELETE http://localhost:3000/units/[:id].json
+```
+
+- Delete an existing property by ID:
+
+```bash
+DELETE http://localhost:3000/properties/[:id].json
+```
+
+### Additional Notes
+
+- Ensure that the server is running when you are testing the API endpoints.
+- For POST and PUT requests, include the required payload in the request body, formatted as JSON.
+- API responses will be in JSON format, making it easy to parse the results in Postman or another client.
