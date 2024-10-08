@@ -4,9 +4,8 @@ class ApplicationController < ActionController::Base
   skip_forgery_protection
 
   private
-   
+
   def set_property_units
     @property_units= Property.includes(:units)
   end
-
 end

@@ -9,7 +9,7 @@
 #   end
 require 'faker'
 
-100.times do 
+100.times do
   property = Property.create(address: Faker::Address.street_address, city: Faker::Address.city, state: Faker::Address.state)
   rand(5..30).times do
     Unit.create(property_id: property.id, bedroom_count: rand(1..5), bathroom_count: rand(1..5), square_footage: rand(600..3000), rent_price: rand(800.00..5000.00))

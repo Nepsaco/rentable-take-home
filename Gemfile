@@ -58,6 +58,6 @@ end
 
 gem "tailwindcss-rails", "~> 2.7"
 
-gem 'kaminari', '~> 1.2', '>= 1.2.2'
+gem "kaminari", "~> 1.2", ">= 1.2.2"
 
 gem "faker", "~> 3.4"

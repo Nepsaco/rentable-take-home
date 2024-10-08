@@ -34,5 +34,3 @@ plugin :tmp_restart
 pidfile ENV["PIDFILE"] if ENV["PIDFILE"]
 
 plugin :tailwindcss if ENV.fetch("RAILS_ENV", "development") == "development"
-
-
