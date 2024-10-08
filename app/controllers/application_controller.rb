@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
 
   private
    
-  def property_units
-    @property_units = Property.includes(:units).page(params[:page]).per(24)
+  def set_property_units
+    @property_units= Property.includes(:units)
   end
 
 end

@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: %i[ show edit update destroy ]
+  before_action :set_property_units, only: %i[ property_units ]
 
   # GET /properties or /properties.json
   def index
@@ -55,6 +56,10 @@ class PropertiesController < ApplicationController
       format.html { redirect_to properties_path, status: :see_other, notice: "Property was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  # GET /property_units or /property_units.json
+  def property_units
   end
 
   private
