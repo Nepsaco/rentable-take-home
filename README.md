@@ -19,8 +19,8 @@ rails -v
 Clone this repository to your local machine:
 
 ```bash
-git clone <repository_url>
-cd <repository_folder>
+git clone https://github.com/Nepsaco/rentable-take-home
+cd rentable-take-home
 ```
 
 2. **Install dependencies**  
