@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Property with Units" %>
+
+<h1>Property with Units</h1>
+
+<div id="property_units">
+  <% @property_units.each do |property| %>
+    <%= render partial: "property_unit", locals: {property_unit: property} %>
+    <p>
+      <%= link_to "Show this property", property %>
+    </p>
+  <% end %>
+</div>
+

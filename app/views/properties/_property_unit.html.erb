@@ -1,0 +1,34 @@
+<div id="<%= dom_id property_unit%>">
+  <p>
+    <strong>Address:</strong>
+    <%= property_unit.address %>,
+    <%= property_unit.city %>,
+    <%= property_unit.state %>
+  </p>
+
+  <p><strong>Units:</strong></p>
+    <% property_unit.units.each do |unit| %>
+      <div style="padding: 0 2rem .5rem 2rem">
+        <p>
+          <strong>Bedroom count:</strong>
+          <%= unit.bedroom_count %>
+        </p>
+
+        <p>
+          <strong>Bathroom count:</strong>
+          <%= unit.bathroom_count %>
+        </p>
+
+        <p>
+          <strong>Square footage:</strong>
+          <%= unit.square_footage %>
+        </p>
+
+        <p>
+          <strong>Rent price:</strong>
+          <%= number_to_currency unit.rent_price %>
+        </p>
+      </div>
+    <% end %>
+
+</div>

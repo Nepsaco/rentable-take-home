@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Property with Units" %>
+
+<div id="property_units" class="flex flex-wrap p-8 justify-between">
+  <% @properties.each do |property| %>
+    <%= render partial: "property_unit", locals: {property_unit: property} %>
+    <p>
+    <%= link_to "Show this property", property, :class => "border rounded py-2 px-4 w-fit bg-blue-200 hover:bg-blue-500"%>
+    </p>
+  <% end %>
+</div>
+

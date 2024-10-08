@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="flex flex-col p-8">
+  <%= render @property %>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <% @property.units.each do |unit|%>
+      <div class="py-8 px-12">
+        <%= render partial: "units/unit_card", locals: {unit: unit} %>
+      </div>
+    <% end %>
+  </div>
+</div>

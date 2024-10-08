@@ -1,0 +1,22 @@
+<div id="<%= dom_id property_unit%>" class="flex flex-col justify-between max-w-sm min-h-full rounded overflow-hidden border border-gray-200 p-8 shadow-lg bg-gray-50 hover:bg-white hover:shadow-lg">
+  <div>
+    <p>
+      <strong>Address:</strong>
+      <%= property_unit.address %>
+    </p>
+
+    <p>
+      <strong>City:</strong>
+      <%= property_unit.city %>
+    </p>
+
+    <p>
+      <strong>State:</strong>
+      <%= property_unit.state %>
+    </p>
+
+    <p><strong>Units Avaliabale:</strong> <%= property_unit.units.size %></p>
+  </div>
+
+  <%= link_to "View Units", property_path(property_unit.id), :class => "border rounded py-2 px-4 w-fit bg-blue-200 hover:bg-blue-500" %>
+</div>

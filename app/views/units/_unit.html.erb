@@ -1,0 +1,13 @@
+<div id="<%= dom_id unit %>">
+  <h3 class="text-lg pb-8">
+    <strong><%= number_to_currency unit.rent_price %></strong> 
+  </h3>
+
+  <p class="pb-8">
+    <strong>Bedroom count:</strong> <%= unit.bedroom_count %> |
+    <strong>Bathroom count:</strong> <%= unit.bathroom_count %> |
+    <strong>Square footage:</strong> <%= unit.square_footage %> sq. ft.
+  </p>
+
+  <%= link_to "View Property", property_path(unit.property_id), :class => "border rounded py-1 px-3 w-fit bg-blue-200 hover:bg-blue-500" %>
+</div>

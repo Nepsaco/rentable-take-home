@@ -1,0 +1,11 @@
+<div id="<%= dom_id unit %>" class="bg-gray-50 flex flex-col max-w-sm rounded overflow-hidden border border-gray-200 p-8 shadow-lg hover:bg-white hover:shadow-lg">
+  <h3 class='text-lg font-bold'><%= number_to_currency unit.rent_price %></h3>
+
+  <p>Bedroom count: <%= unit.bedroom_count %></p>
+
+  <p>Bathroom count: <%= unit.bathroom_count %></p>
+
+  <p>Square footage: <%= unit.square_footage %></p>
+
+  <%= link_to "View Unit", unit_path(unit.id), :class => "border rounded py-1 px-3 w-fit mt-8 bg-blue-200 hover:bg-blue-500" %>
+</div>
