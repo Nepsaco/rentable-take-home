@@ -129,6 +129,10 @@ DELETE http://localhost:3000/units/[:id].json
 DELETE http://localhost:3000/properties/[:id].json
 ```
 
+Example Post request:
+
+<img width="1423" alt="image" src="https://github.com/user-attachments/assets/fc838637-866a-45a8-a69b-5fdc582bd4e2">
+
 ### Additional Notes
 
 - Ensure that the server is running when you are testing the API endpoints.
