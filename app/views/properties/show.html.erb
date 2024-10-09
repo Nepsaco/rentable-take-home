@@ -1,4 +1,9 @@
-<p style="color: green"><%= notice %></p>
+<%= javascript_importmap_tags %>
+<script>
+    var mapData = <%= raw @map_data %>;
+</script>
+
+<div id="map" style="height: 500px; width: 100%;"></div>
 
 <div class="flex flex-col p-8">
   <%= render @property %>

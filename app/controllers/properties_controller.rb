@@ -9,6 +9,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1 or /properties/1.json
   def show
+    @map_data = @property.to_json(only: [ :latitude, :longitude, :address ])
   end
 
   # GET /properties/new
@@ -70,6 +71,6 @@ class PropertiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def property_params
-    params.require(:property).permit(:address, :city, :state)
+    params.require(:property).permit(:address, :city, :state, :latitude, :longitude)
   end
 end
