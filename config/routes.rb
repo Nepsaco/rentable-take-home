@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :units
   resources :properties
   resources :searches
+  resources :ollamaai
 
   get "property_units" => "properties#property_units"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

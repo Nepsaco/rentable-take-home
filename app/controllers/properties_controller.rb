@@ -9,6 +9,22 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1 or /properties/1.json
   def show
+    ollama_service = OllamaService.new
+
+    property_details = {
+      address: @property.address,
+      city: @property.city,
+      state: @property.state,
+      units: @property.units
+    }
+
+    @description = ollama_service.generate_property_description(property_details)
+    # @image_url = ollama_service.generate_property_image(property_details)
+
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: { description: @description, image_url: @image_url } }
+    end
   end
 
   # GET /properties/new

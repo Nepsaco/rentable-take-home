@@ -2,6 +2,7 @@
 
 <div class="flex flex-col p-8">
   <%= render @property %>
+  <%= @description[0]["response"] %>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
     <% @property.units.each do |unit|%>
